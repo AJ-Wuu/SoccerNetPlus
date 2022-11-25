@@ -1,7 +1,7 @@
 # Player Detection with Birdeye 2D Transformation (using Yolo-v3 and OpenCV)
 
 ## Set Up
-Download official pretrained weights either using `wget https://pjreddie.com/media/files/yolov3.weights -O models/yolov3.weights` or directly from [here](https://pjreddie.com/media/files/yolov3.weights). Then put `yolov3.weights` under `yolov3_deepsort/models`.
+Download official pretrained weights either using `wget https://pjreddie.com/media/files/yolov3.weights -O models/yolov3.weights` or directly from [here](https://pjreddie.com/media/files/yolov3.weights). Then put `yolov3.weights` under `yolov3_opencv/models`.
 
 ## Our Contribution
 1. Find fixed-angle video as training resources (because OpenCV cannot be directly applied on moving-angle videos) from [ISSIA Dataset](http://ipl.ce.sharif.edu/ball_datasets.html)
