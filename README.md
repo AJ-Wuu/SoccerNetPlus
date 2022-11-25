@@ -10,6 +10,7 @@
 ### set up locally
 1. clone this repo to your computer
 2. download official pretrained weights from [here](https://pjreddie.com/media/files/yolov3.weights), and put `yolov3.weights` under `yolov3_opencv/models` and `yolov3_deepsort/weights`
+3. get the [test video](https://github.com/AJ-Wuu/SoccerNetPlus/blob/main/video_input/README.md)
 
 ## Website: 
 
