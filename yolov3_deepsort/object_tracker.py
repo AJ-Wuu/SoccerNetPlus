@@ -88,9 +88,8 @@ def main(_argv):
         frame_index = -1 
     
     count = 0
-    # there cannot be over 30 people on the field
-    coordinates_time_prev = (-1) * np.ones((30,4))
-    coordinates_time_next = (-1) * np.ones((30,4))
+    coordinates_time_prev = {}
+    coordinates_time_next = {}
     while True:
         _, img = vid.read()
 
@@ -146,8 +145,8 @@ def main(_argv):
             cv2.rectangle(img, (int(bbox[0]), int(bbox[1]-30)), (int(bbox[0])+(len(class_name)+len(str(track.track_id)))*17, int(bbox[1])), color, -1)
             
             # Calculate the instant speed
-            if coordinates_time_prev[track.track_id][0] != -1 and coordinates_time_next[track.track_id][0] != -1:
-                speed = estimate_speed(coordinates_time_prev[track.track_id], coordinates_time_next[track.track_id], fps)
+            if coordinates_time_prev.get(track.track_id) is not None and coordinates_time_next.get(track.track_id) is not None:
+                speed = estimate_speed(coordinates_time_prev.get(track.track_id), coordinates_time_next.get(track.track_id), fps)
                 cv2.putText(img, "{:.2f}".format(speed) + "m/s", (int(bbox[0]), int(bbox[1]-10)), 0, 0.75, (255,255,255), 2)
             else:    
                 cv2.putText(img, class_name + "-" + str(track.track_id), (int(bbox[0]), int(bbox[1]-10)), 0, 0.75, (255,255,255), 2)
