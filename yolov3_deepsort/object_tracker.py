@@ -1,4 +1,4 @@
-import time, random
+import time, random, math
 import numpy as np
 from absl import app, flags, logging
 from absl.flags import FLAGS
@@ -28,6 +28,17 @@ flags.DEFINE_string('video', './data/video/test.mp4',
 flags.DEFINE_string('output', None, 'path to output video')
 flags.DEFINE_string('output_format', 'XVID', 'codec used in VideoWriter when saving video to file')
 flags.DEFINE_integer('num_classes', 80, 'number of classes in the model')
+
+
+# estimate the approximate speed
+def estimate_speed(location1, location2, frames_per_second):
+    # location = [x, y, w, h]
+    dist_pixel = math.sqrt(math.pow(location2[0] - location1[0], 2) + math.pow(location2[1] - location1[1], 2))
+    # prop = 1.83m / height -- we approximate each player to be 1.83m tall
+    prop = 1.83 / (location1[3] - location1[1])
+    dist_meter = dist_pixel * prop
+    speed = dist_meter * frames_per_second
+    return speed
 
 
 def main(_argv):
@@ -61,6 +72,8 @@ def main(_argv):
         vid = cv2.VideoCapture(int(FLAGS.video))
     except:
         vid = cv2.VideoCapture(FLAGS.video)
+    
+    fps = (int)(vid.get(cv2.CAP_PROP_FPS))
 
     out = None
 
@@ -74,8 +87,10 @@ def main(_argv):
         list_file = open('detection.txt', 'w')
         frame_index = -1 
     
-    fps = 0.0
-    count = 0 
+    count = 0
+    # there cannot be over 30 people on the field
+    coordinates_time_prev = (-1) * np.ones((30,4))
+    coordinates_time_next = (-1) * np.ones((30,4))
     while True:
         _, img = vid.read()
 
@@ -92,7 +107,6 @@ def main(_argv):
         img_in = tf.expand_dims(img_in, 0)
         img_in = transform_images(img_in, FLAGS.size)
 
-        t1 = time.time()
         boxes, scores, classes, nums = yolo.predict(img_in)
         classes = classes[0]
         names = []
@@ -118,6 +132,8 @@ def main(_argv):
         tracker.predict()
         tracker.update(detections)
 
+        # Update prev coordinates
+        coordinates_time_prev = coordinates_time_next.copy()
         for track in tracker.tracks:
             if not track.is_confirmed() or track.time_since_update > 1:
                 continue 
@@ -125,9 +141,16 @@ def main(_argv):
             class_name = track.get_class()
             color = colors[int(track.track_id) % len(colors)]
             color = [i * 255 for i in color]
+            coordinates_time_next[track.track_id] = [(int)(bbox[i]) for i in range(0, 4)]
             cv2.rectangle(img, (int(bbox[0]), int(bbox[1])), (int(bbox[2]), int(bbox[3])), color, 2)
             cv2.rectangle(img, (int(bbox[0]), int(bbox[1]-30)), (int(bbox[0])+(len(class_name)+len(str(track.track_id)))*17, int(bbox[1])), color, -1)
-            cv2.putText(img, class_name + "-" + str(track.track_id),(int(bbox[0]), int(bbox[1]-10)),0, 0.75, (255,255,255),2)
+            
+            # Calculate the instant speed
+            if coordinates_time_prev[track.track_id][0] != -1 and coordinates_time_next[track.track_id][0] != -1:
+                speed = estimate_speed(coordinates_time_prev[track.track_id], coordinates_time_next[track.track_id], fps)
+                cv2.putText(img, "{:.2f}".format(speed) + "m/s", (int(bbox[0]), int(bbox[1]-10)), 0, 0.75, (255,255,255), 2)
+            else:    
+                cv2.putText(img, class_name + "-" + str(track.track_id), (int(bbox[0]), int(bbox[1]-10)), 0, 0.75, (255,255,255), 2)
             
         ### UNCOMMENT BELOW IF YOU WANT CONSTANTLY CHANGING YOLO DETECTIONS TO BE SHOWN ON SCREEN
         #for det in detections:
@@ -135,9 +158,7 @@ def main(_argv):
         #    cv2.rectangle(img,(int(bbox[0]), int(bbox[1])), (int(bbox[2]), int(bbox[3])),(255,0,0), 2)
         
         # print fps on screen 
-        fps  = ( fps + (1./(time.time()-t1)) ) / 2
-        cv2.putText(img, "FPS: {:.2f}".format(fps), (0, 30),
-                          cv2.FONT_HERSHEY_COMPLEX_SMALL, 1, (0, 0, 255), 2)
+        # cv2.putText(img, "FPS: {:.2f}".format(fps), (0, 30), cv2.FONT_HERSHEY_COMPLEX_SMALL, 1, (0, 0, 255), 2)
         # cv2.imshow('output', img)
         if FLAGS.output:
             out.write(img)
