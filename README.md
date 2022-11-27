@@ -1,10 +1,10 @@
-# SoccerNetPlus
+<img src="https://github.com/AJ-Wuu/SoccerNetPlus/blob/main/logo/SoccerNetPlus.png" height="200px">
 
 ## Try it out
 ### with our UI
 
-### with our source codes
-<a href="https://drive.google.com/drive/folders/1lMtUF5EuGsvRCW-7rBGplanaK-LEM8bK?usp=share_link"><img src="https://github.com/AJ-Wuu/SoccerNetPlus/blob/main/video_output/GoogleCloud.jpg" style="height:30px"></a>
+### with our source codes:
+<a href="https://drive.google.com/drive/folders/1lMtUF5EuGsvRCW-7rBGplanaK-LEM8bK?usp=share_link"><img height="50px" src="https://github.com/AJ-Wuu/SoccerNetPlus/blob/main/logo/GoogleCloud.png"></a>
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1TH4MYCgGKoJOpXKlz-OWd9wQ8spBhXwe)
 
 ### set up locally
