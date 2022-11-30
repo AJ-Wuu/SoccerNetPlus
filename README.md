@@ -15,4 +15,3 @@
 ## Website: 
 
 ## Video Demo: 
-[Presentation Slides](https://github.com/AJ-Wuu/SoccerNetPlus/blob/main/Final%20Presentation.pptx)
