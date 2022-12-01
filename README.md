@@ -1,5 +1,5 @@
-<img src="https://github.com/AJ-Wuu/SoccerNetPlus/blob/main/logo/SoccerNetPlus.png" height="200px">
-
+# SoccerNetPlus
+![image](https://github.com/AJ-Wuu/SoccerNetPlus/blob/main/logo/SoccerNetPlus.png)
 ## Try it out
 ### with our UI
 
