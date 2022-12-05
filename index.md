@@ -14,8 +14,8 @@ We are passionate about this project because we are interested in the usefulness
 Yolo object detection model, OpenCV object detector, DeepSort object tracker
 
 ## Target Problems
-How can we help people to better understand soccer games, especially the new fans?
-How to make people’s life easier while enjoying the beauty of computer vision?
+1. How can we help people to better understand soccer games, especially the new fans?
+2. How to make people’s life easier while enjoying the beauty of computer vision?
 
 ## Importance
 Soccer is one of the world’s most popular sports. As a result, the revenues associated with the sport are astronomical. Improvements to the way fans view soccer have the potential to increase revenues, affect the way billions of people enjoy the sport, and attract even more people to the sport. Utilizing a player detection and camera calibration model in unison could be used in scenarios such as auto-generating highlights, improving live graphics, and strategy analysis. Successfully recreating such a system would be rewarding both technically and personally because of our passion for soccer.
@@ -26,7 +26,7 @@ Soccer is one of the world’s most popular sports. As a result, the revenues as
 ![Image](./video_input/sample-video-screenshot.png)
 
 ## Pipeline
-![Image](__________________________________________)
+![Image](./logo/Pipeline.png)
 
 ## Implementation
 ### Backend
