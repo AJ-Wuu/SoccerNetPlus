@@ -80,7 +80,7 @@ Soccer is one of the world’s most popular sports. As a result, the revenues as
 ## How To Run This Project Yourself
 ### With our [UI](https://kssn3t627cdj22bl.anvil.app/RESLVSCIHCHAY4EEBPRQ6EX3)
 ### With our source codes:
-<a href="https://drive.google.com/drive/folders/1lMtUF5EuGsvRCW-7rBGplanaK-LEM8bK?usp=share_link"><img height="50px" src="https://github.com/AJ-Wuu/SoccerNetPlus/blob/main/logo/GoogleCloud.png"></a>
+<a href="https://drive.google.com/drive/folders/1lMtUF5EuGsvRCW-7rBGplanaK-LEM8bK?usp=share_link"><img height="50px" src="./logo/GoogleCloud.png"></a>
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1TH4MYCgGKoJOpXKlz-OWd9wQ8spBhXwe)
 
 ### Set up locally:
