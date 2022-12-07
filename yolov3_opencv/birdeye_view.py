@@ -1,17 +1,18 @@
 from absl import app, flags
 from absl.flags import FLAGS
+"""
 import cv2
 import numpy as np
 from tensorflow import keras
 from tensorflow.keras.models import load_model
 from numpy import argmax
+"""
 
+flags.DEFINE_string('video', '/content/gdrive/MyDrive/SoccerNetPlus/video_input/test-video.mp4', 'path to input video')
+flags.DEFINE_string('output_detection', '/content/gdrive/MyDrive/SoccerNetPlus/video_output/detection.mp4', 'path to output video detection part')
+flags.DEFINE_string('output_birdeye', '/content/gdrive/MyDrive/SoccerNetPlus/video_output/birdeye.mp4', 'path to output video birdeye part')
 
-flags.DEFINE_string('video', '../video_input/test-video.mp4', 'path to input video')
-flags.DEFINE_string('output_detection', '../video_output/detection.mp4', 'path to output video detection part')
-flags.DEFINE_string('output_birdeye', '../video_output/birdeye.mp4', 'path to output video birdeye part')
-
-
+"""
 # video and its details
 def preparation():
     global cap
@@ -59,7 +60,7 @@ def load_models():
     colors = np.random.uniform(0, 255, size=(len(classes), 3))
     layer_names = net.getLayerNames()
     global output_layers
-    output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
+    output_layers = [layer_names[i - 1] for i in net.getUnconnectedOutLayers()]
 
 
 # detect players
@@ -220,6 +221,12 @@ def main(_argv):
 
     # close all the frames
     cv2.destroyAllWindows()
+"""
+
+def main(_argv):
+    print(FLAGS.video)
+    print(FLAGS.output_detection)
+    print(FLAGS.output_birdeye)
 
 
 if __name__ == '__main__':
