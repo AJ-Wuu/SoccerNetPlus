@@ -40,7 +40,7 @@ Soccer is one of the world’s most popular sports. As a result, the revenues as
 
 
 ## Outcome:
-[Sample Output Video](_________________________________________)  
+[Sample Output Video](https://drive.google.com/drive/u/0/folders/1tbMIfgOuHYU0ty3Gi3gJgSk2Eqx4roWg)  
 ![Image](./video_output/detection-screenshot.png)
 ![Image](./video_output/birdeye-screenshot.png)
 ![Image](./video_output/tracking-screenshot.png)
