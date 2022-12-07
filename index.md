@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# SoccerNetPlus
+![Image](./video_output/combined-output.png)
 # Introduction
 ## Technologies and Soccer
 Advancements in technology are made each day and it’s no secret that these have been applied to various sports, and this includes soccer. Even though fans have different preferences and opinions towards the new types of technology involved in the game, nine times out of ten, technologies have proven to be extremely helpful and have assisted match officials in making the right call.
