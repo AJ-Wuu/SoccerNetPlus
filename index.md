@@ -26,7 +26,11 @@ Soccer is one of the world’s most popular sports. As a result, the revenues as
 ![Image](./video_input/sample-video-screenshot.png)
 
 ## Pipeline
-![Image](./logo/Pipeline.png)
+<img height="250px" src="./resources/images/video-pipeline.png" align="left" />
+<img height="250px" src="./resources/images/model-pipeline.png" />
+
+![Image](./resources/images/video-pipeline.png)
+![Image](./resources/images/model-pipeline.png)
 
 ## Implementation
 ### Backend
@@ -80,7 +84,7 @@ Soccer is one of the world’s most popular sports. As a result, the revenues as
 ## How To Run This Project Yourself
 ### With our [UI](https://kssn3t627cdj22bl.anvil.app/RESLVSCIHCHAY4EEBPRQ6EX3)
 ### With our source codes:
-<a href="https://drive.google.com/drive/folders/1lMtUF5EuGsvRCW-7rBGplanaK-LEM8bK?usp=share_link"><img height="50px" src="./logo/GoogleCloud.png"></a>
+<a href="https://drive.google.com/drive/folders/1lMtUF5EuGsvRCW-7rBGplanaK-LEM8bK?usp=share_link"><img height="50px" src="./resources/images/GoogleCloud.png" /></a>
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1TH4MYCgGKoJOpXKlz-OWd9wQ8spBhXwe)
 
 ### Set up locally:
@@ -91,8 +95,8 @@ Soccer is one of the world’s most popular sports. As a result, the revenues as
 
 
 ## References
-1. Database: [ISSIA Dataset](https://issasports.com/appv1)
-2. Paper: [Camera Calibration and Player Localization in SoccerNet-v2 and Investigation of their Representations for Action Spotting](https://openaccess.thecvf.com/content/CVPR2021W/CVSports/papers/Cioppa_Camera_Calibration_and_Player_Localization_in_SoccerNet-v2_and_Investigation_of_CVPRW_2021_paper.pdf)
-3. Online Tutorial: [TowardsDataScience](https://towardsdatascience.com/how-to-track-football-players-using-yolo-sort-and-opencv-6c58f71120b8)
-4. Pretrained Model: [Yolo-v3 by Joseph Chet Redmon](https://pjreddie.com/)
-5. Open Source Project: [The AI Guy](https://github.com/theAIGuysCode)
+1. ISSIA. *ISSA Sports Database*, 2022, https://issasports.com/appv1.
+2. Cioppa, A., et al. "Camera Calibration and Player Localization in SoccerNet-v2 and Investigation of their Representations for Action Spotting." *SoccerNet*, 2021, https://openaccess.thecvf.com/content/CVPR2021W/CVSports/papers/Cioppa_Camera_Calibration_and_Player_Localization_in_SoccerNet-v2_and_Investigation_of_CVPRW_2021_paper.pdf.
+3. K, C. “How to Track Football Players Using Yolo, Sort and OpenCV.” *Towards Data Science*, 2020, https://towardsdatascience.com/how-to-track-football-players-using-yolo-sort-and-opencv-6c58f71120b8.
+4. Redmon, Joseph. *YOLO-v3*, 2018, https://pjreddie.com/.
+5. The AI Guy. https://github.com/theAIGuysCode.
