@@ -21,14 +21,10 @@ Yolo object detection model, OpenCV object detector, DeepSort object tracker
 Soccer is one of the world’s most popular sports. As a result, the revenues associated with the sport are astronomical. Improvements to the way fans view soccer have the potential to increase revenues, affect the way billions of people enjoy the sport, and attract even more people to the sport. Utilizing a player detection and camera calibration model in unison could be used in scenarios such as auto-generating highlights, improving live graphics, and strategy analysis. Successfully recreating such a system would be rewarding both technically and personally because of our passion for soccer.
 
 # Approach
-## Input:
-[Sample Input Video](https://youtu.be/ta-M_RIHyFA)  
+## Input: [Sample Input Video](https://youtu.be/ta-M_RIHyFA)  
 ![Image](./video_input/sample-video-screenshot.png)
 
 ## Pipeline
-<img height="250px" src="./resources/images/video-pipeline.png" align="left" />
-<img height="250px" src="./resources/images/model-pipeline.png" />
-
 ![Image](./resources/images/video-pipeline.png)
 ![Image](./resources/images/model-pipeline.png)
 
@@ -43,8 +39,7 @@ Soccer is one of the world’s most popular sports. As a result, the revenues as
 
 
 
-## Outcome:
-[Sample Output Video](https://drive.google.com/drive/u/0/folders/1tbMIfgOuHYU0ty3Gi3gJgSk2Eqx4roWg)  
+## Outcome: [Demo](https://youtu.be/nknLKGR8ZgM), [Sample Output Video](https://drive.google.com/drive/u/0/folders/1tbMIfgOuHYU0ty3Gi3gJgSk2Eqx4roWg)  
 ![Image](./video_output/detection-screenshot.png)
 ![Image](./video_output/birdeye-screenshot.png)
 ![Image](./video_output/tracking-screenshot.png)
