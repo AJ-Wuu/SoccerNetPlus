@@ -100,11 +100,12 @@ Make predictions – like where the ball is going to land and which player may t
 
 # Resources
 ## Project Materials
-[Project Proposal](https://github.com/AJ-Wuu/SoccerNetPlus/blob/e921a7dc37e40a3adde34b836b4566f8b5bf3f8a/resources/reports/Proposal.pdf)
-[Midterm Report](https://github.com/AJ-Wuu/SoccerNetPlus/blob/e921a7dc37e40a3adde34b836b4566f8b5bf3f8a/resources/reports/Midterm%20Report.pdf)
-[Final Slides](https://docs.google.com/presentation/d/1PVnrJJqY1PtrSmgknihM4s7R2XX_8XDHUd-9unMRtAM/edit?usp=sharing)
-[Final Video](https://youtu.be/nknLKGR8ZgM)
-[Github Page](https://github.com/AJ-Wuu/SoccerNetPlus)
+* [Project Proposal](https://github.com/AJ-Wuu/SoccerNetPlus/blob/e921a7dc37e40a3adde34b836b4566f8b5bf3f8a/resources/reports/Proposal.pdf)
+* [Midterm Report](https://github.com/AJ-Wuu/SoccerNetPlus/blob/e921a7dc37e40a3adde34b836b4566f8b5bf3f8a/resources/reports/Midterm%20Report.pdf)
+* [Final Slides](https://docs.google.com/presentation/d/1PVnrJJqY1PtrSmgknihM4s7R2XX_8XDHUd-9unMRtAM/edit?usp=sharing)
+* [Final Video](https://youtu.be/nknLKGR8ZgM)
+* [Github Page](https://github.com/AJ-Wuu/SoccerNetPlus)
+
 ## How To Run This Project Yourself
 #### With our source code:
 <a href="https://drive.google.com/drive/folders/1lMtUF5EuGsvRCW-7rBGplanaK-LEM8bK?usp=share_link"><img height="50px" src="resources/images/GoogleCloud.png"></a>
