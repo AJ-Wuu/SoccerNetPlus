@@ -53,10 +53,10 @@ In the second branch, we do tracking and statistics calculation. This time, we r
 
 <table>
   <tr>
-    <th>Original</th>
-    <th>Birdseye</th>
-    <th>Detection</th>
-    <th>Tracking</th>
+    <th><b>Original</b></th>
+    <th><b>Birdseye</b></th>
+    <th><b>Detection</b></th>
+    <th><b>Tracking</b></th>
   </tr>
   <tr>
     <td><img src="resources/images/GIFs/original.gif"></td>
