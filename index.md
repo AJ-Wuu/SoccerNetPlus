@@ -23,14 +23,14 @@ This project is based on [action spotting and localization with SoccerNet-v2](ht
 1. Utilize state of the art computer vision models to detect and highlight players, provide player statistics, and generate a top-down view from a side angle video
 2. Create a straightforward user interface for the computer vision models which allows non-technical users to enjoy player detection and tracking to soccer video clips. 
 ## Sample Input: [Input Video](https://youtu.be/ta-M_RIHyFA)
-![Image](https://github.com/AJ-Wuu/SoccerNetPlus/blob/main/video_input/sample-video-screenshot.png)
+![Image](video_input/sample-video-screenshot.png)
 
 ## Pipeline
 ![Image](resources/images/video-pipeline.png)
 ![Image](resources/images/model-pipeline.png)
 
 ## User Interface
-![Image](resources/images/ui.gif)
+![Image](resources/images/GIFSs/ui.gif)
 ## Implementation
 ### User Interface
 The frontend was developed using Anvil, which is a Python based web-app builder. Anvil was chosen due to its Python-based approach and its relative ease to set up. The Anvil UI contains some simple code for UI updates, basic input parsing, and making calls to our backend stored in a Google Colab notebook. In regards to the UI, the code calls the relevant backend functions and displays a progress update on success, or an error message on failure. 
@@ -51,10 +51,20 @@ In the second branch, we do tracking and statistics calculation. This time, we r
 2. Deciding how to arrange the different functionality of our program: detection, transformation and tracking. Although it is possible to combine all three functions into one big program, it does take quite a while to finish running. This led us to split them into two smaller model calls, which let the user decide what they would like as the output. Time to completion is nearly halved if a user only needs one of the possible output options.
 3. Using FFmpeg to download or clip videos. Figuring out the flags we needed in the console command, and which order of the flags resulted in the best performance, took a lot of research and trial and error.
 
-## Outcome
-|Original|Birdeye|Detection|Tracking|
-| ----------- | ----------- | ----------- | ----------- |
-| ![GIF](resources/images/GIFs/original.gif)| ![GIF](resources/images/GIFs/birdeye.gif) | ![GIF](resources/images/GIFs/detection.gif)| ![GIF](resources/images/GIFs/tracking.gif)|
+<table>
+  <tr>
+    <th>Original</th>
+    <th>Birdseye</th>
+    <th>Detection</th>
+    <th>Tracking</th>
+  </tr>
+  <tr>
+    <td> <img src="resources/images/GIFs/original.gif"</td>
+    <td><img src="resources/images/GIFs/birdeye.gif"</td>
+    <td><img src="resources/images/GIFs/detection.gif"/td>
+    <td><img src="resources/images/GIFs/tracking.gif"/td>
+  </tr>
+</table>
 
 ### [Final Video](https://youtu.be/nknLKGR8ZgM)
 
